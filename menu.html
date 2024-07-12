@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
+    <title>Kedai Vegetarian Thien En</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="logo-section">
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <img src="Thien En/Logo.png" alt="Thien En Logo">
+            <div class="text-section">
+                <h1>Kedai Vegetarian Thien En</h1>
+                <div class="containername">
+                    <div id="welcomeMessage" class="welcome-message">
+                        <!-- Welcome message content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa fa-info-circle"></i> About Us</a></li>
+            <li class="active"><a href="menu.html"><i class="fa fa-list"></i> Menu</a></li>
+            <li><a href="article.html"><i class="fa fa-newspaper"></i> Article</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+    </section>
+   
+    <nav>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all" onclick="showCategory('all')">All</button>
+            <button class="filter-btn" data-filter="food" onclick="showCategory('food')">Food</button>
+            <button class="filter-btn" data-filter="snacks" onclick="showCategory('snacks')">Snacks</button>
+            <button class="filter-btn" data-filter="japanese" onclick="showCategory('japanese')">Japanese Food</button>
+            <button class="filter-btn" data-filter="korean" onclick="showCategory('korean')">Korean Food</button>
+            <button class="filter-btn" data-filter="chinese" onclick="showCategory('chinese')">Chinese Food</button>
+            <button class="filter-btn" data-filter="drinks" onclick="showCategory('drinks')">Drinks</button>
+        </div>
+    </nav>
+
+    <section class="menu-container">
+        <div class="menu">
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Bakwan.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Bakwan</h2>
+                    <p>Sawi, Tauge, Wortel, Jagung dan Kui Fei</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Batagor.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Batagor</h2>
+                    <p>Batagor, Tahu, Telur, Pangsit, Bumbu Kacang </p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Siomay.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Siomay</h2>
+                    <p>Siomay, Kentang, Tahu, Kol, Telur, Bumbu Kacang</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Tempe Mendoan.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Tempe mendoan</h2>
+                    <p>Tempe, Tepung, Daun Kunyit, Cabe Sayur</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="chinese">
+                <img src="Thien En/Nyong Tahu.png" alt="Chinese Food Image">
+                <div class="menu-item-details">
+                    <h2>Nyong Tahu</h2>
+                    <p>Tahu dan Kuah</p>
+                    <p class="menu-item-price">Rp. 17,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Pentol.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Pentol Kuah</h2>
+                    <p>Pentol Kuah</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Nasi Jamur Geprek.png" alt="food Image">
+                <div class="menu-item-details">
+                    <h2>Nasi Jamur Geprek</h2>
+                    <p>Jamur, Sambal Tomat, Nasi, Timun</p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Mie Jamur Geprek.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Mie Jamur Geprek</h2>
+                    <p>Jamur, Sambal Tomat, Mie, Timun</p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="korean">
+                <img src="Thien En/Raboki.png" alt="korean Image">
+                <div class="menu-item-details">
+                    <h2>Raboki</h2>
+                    <p>Raboki</p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="korean">
+                <img src="Thien En/TTetoboki.png" alt="korean Image">
+                <div class="menu-item-details">
+                    <h2>TTetoboki</h2>
+                    <p>Ttetoboki</p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="chinese">
+                <img src="Thien En/Kwecap.png" alt="Chinese Food Image">
+                <div class="menu-item-details">
+                    <h2>Kwecap</h2>
+                    <p>kulit Kwetiau, Miphio, Tahu, Kuah</p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="chinese">
+                <img src="Thien En/Kwetiau.png" alt="Chinese Food Image">
+                <div class="menu-item-details">
+                    <h2>Kwetiau</h2>
+                    <p>Kwetiau Goreng</p>
+                    <p class="menu-item-price">Rp. 17,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="japanese">
+                <img src="Thien En/Sushi Crispy.png" alt="Japanese Food Image">
+                <div class="menu-item-details">
+                    <h2>Sushi Crispy</h2>
+                    <p>Ham, Timun, Wortel, Nasi, Nori</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="japanese">
+                <img src="Thien En/Sushi Udang.png" alt="Japanese Food Image">
+                <div class="menu-item-details">
+                    <h2>Sushi Udang</h2>
+                    <p>Daging Analog, Nori, Wortel, Timun, Saus Tomat dan Mayonaise</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="japanese">
+                <img src="Thien En/Sushi Nori.png" alt="Japanese Food Image">
+                <div class="menu-item-details">
+                    <h2>Sushi Nori</h2>
+                    <p>Nasi, Nori, Timun, Wortel, Saus Tomat dan Mayonaise</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="japanese">
+                <img src="Thien En/Tamago Sushi.png" alt="Japanese Food Image">
+                <div class="menu-item-details">
+                    <h2>Tamago Sushi</h2>
+                    <p>Nasi, Telur, Daging Analog, Nori, Wijen</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="japanese">
+                <img src="Thien En/Sushi Goreng.png" alt="Japanese Food Image">
+                <div class="menu-item-details">
+                    <h2>Fried Sushi </h2>
+                    <p>Nori, Nasi, Ham, Timun, Wortel, Tepung Roti, Saus Tomat dan Mayonaise</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Tahu Pedas.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Tahu Pedas</h2>
+                    <p>Tahu dan Cabe</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="chinese">
+                <img src="Thien En/Sayur Capcai.png" alt="Chinese Food Image">
+                <div class="menu-item-details">
+                    <h2>Capcay</h2>
+                    <p>Baby Corn, Kol, Wortel, Brokoli, Sawi Jakarta, Daging Analog</p>
+                    <p class="menu-item-price">Rp. 20,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Nasgor Petai.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Nasi Goreng petai</h2>
+                    <p>Nasi Goreng dengan Petai</p>
+                    <p class="menu-item-price">Rp. 20,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Nasgor 2.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Nasi Goreng XiangChun Petai</h2>
+                    <p>Nasi, Telur, Kerupuk, Petai</p>
+                    <p class="menu-item-price">Rp. 23,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Nasgor 3.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Nasi Goreng Kampung</h2>
+                    <p>Nasi, Jagung, Kacang Panjang, Wortel, Acar, Kerupuk</p>
+                    <p class="menu-item-price">Rp. 17,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Nasgor.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Nasi Goreng Sambal</h2>
+                    <p>Nasi, Jagung, Kacang Panjang, Wortel, Acar, Kerupuk</p>
+                    <p class="menu-item-price">Rp. 17,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Pentol Bakar.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Pentol Bakar</h2>
+                    <p>Pentol Bakar</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Burger.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Burger</h2>
+                    <p>Roti, Ham, Timun, Selada, Saus Tomat dan Mayonaise</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/HotDog.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>HotDog</h2>
+                    <p>Roti, Sosis, Timun, Selada, Saus Tomat dan Mayonaise</p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Burshi.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Burshi (Burger Sushi)</h2>
+                    <p>Kui Fei Crispy, Nori, Telur Dadar</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <img src="Thien En/Tahu Walik.png" alt="Snacks Image">
+                <div class="menu-item-details">
+                    <h2>Tahu Walik</h2>
+                    <p>Tahu </p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="Thien En/Seblak.png" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Seblak</h2>
+                    <p>Kerupuk, Jamur, Macaroni, Telur, Mie</p>
+                    <p class="menu-item-price">Rp. 22,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="korean">
+                <img src="" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Crispy Gochujang Chicken</h2>
+                    <p></p>
+                    <p class="menu-item-price">Rp. 25,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="food">
+                <img src="" alt="Food Image">
+                <div class="menu-item-details">
+                    <h2>Bubur</h2>
+                    <p></p>
+                    <p class="menu-item-price">Rp. 18,000</p>
+                </div>
+            </div>
+            <div class="menu-item" data-category="chinese">
+                <img src="" alt="Chinese Food Image">
+                <div class="menu-item-details">
+                    <h2>Telur Tomat</h2>
+                    <p></p>
+                    <p class="menu-item-price">Rp. 15,000</p>
+                </div>
+            <div class="menu-items" id="drinks">
+        <div class="menu-container1">
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Es Teh Manis">
+                <div class="menu-item1-details">
+                    <h2>Es Teh Manis</h2>
+                    <p class="menu-item1-price">Rp. 5,000</p>
+                </div>
+            </div>
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Jeruk Nipis">
+                <div class="menu-item1-details">
+                    <h2>Jeruk Nipis</h2>
+                    <p class="menu-item1-price">Rp. 6,000</p>
+                </div>
+            </div>
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Liang Teh">
+                <div class="menu-item1-details">
+                    <h2>Liang Teh</h2>
+                    <p class="menu-item1-price">Rp. 5,000</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-container2">
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Lemon Tea">
+                <div class="menu-item1-details">
+                    <h2>Lemon Tea</h2>
+                    <p class="menu-item1-price">Rp. 8,000</p>
+                </div>
+            </div>
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Lemonade">
+                <div class="menu-item1-details">
+                    <h2>Lemonade</h2>
+                    <p class="menu-item1-price">Rp. 8,000</p>
+                </div>
+            </div>
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Air Mineral Botol">
+                <div class="menu-item1-details">
+                    <h2>Air Mineral Botol</h2>
+                    <p class="menu-item1-price">Rp. 5,000</p>
+                </div>
+            </div>
+            <div class="menu-item1" data-category="drinks">
+                <img src="path/to/your/image.png" alt="Air Mineral Gelas">
+                <div class="menu-item1-details">
+                    <h2>Air Mineral Gelas</h2>
+                    <p class="menu-item1-price">Rp. 1,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+  
+    
+    <hr class="aligned-hr">
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Kedai Vegetarian Thien En</h4>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/thien_en_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="article.html">Article</a></li>
+                    <li><a href="https://wa.me/6289515973228?text=Halo%20Thien%20En,%20saya%20ingin%20memesan%20makanan%20untuk%20acara%20kantor">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">FAQ</a></li>
+                    <li><a href="https://wa.me/6289515973228?text=Halo%20Thien%20En,%20saya%20ingin%20memesan%20makanan%20untuk%20acara%20kantor">Need Help</a></li>
+                    <li><a href="index.html">Page</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://gofood.link/u/qe79x">GO-FOOD</a></li>
+                    <li><a href="https://maps.app.goo.gl/7r8sA9b7tZ62shBd7">Maps</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Privacy Statement</a>
+                <a href="#">Terms Of Use</a>
+                <a href="https://maps.app.goo.gl/7r8sA9b7tZ62shBd7">Site Map</a>
+                <a href="#">Cookie Preferences</a>
+            </div>
+            <p>&copy; 2024 Kedai Thien En, All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="">
+        // Ambil nama pengguna dari localStorage
+        var username = localStorage.getItem('username');
+        if (username) {
+            // Ganti XXX dengan nama pengguna yang diambil
+            document.getElementById('welcomeMessage').textContent =  username;
+        } else {
+            document.getElementById('welcomeMessage').textContent = 'Selamat datang!';
+        }
+    </script>
+
+<script src="index menu.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
